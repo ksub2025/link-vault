@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Link Vault",
+  "version": "1.0.0",
+  "description": "Capture links locally with a topic and a timeless/timely status. Nothing leaves this machine.",
+  "permissions": ["storage", "contextMenus", "activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Link Vault"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

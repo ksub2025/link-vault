@@ -1,0 +1,59 @@
+.manage-body {
+  width: auto;
+  min-height: 100vh;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.manage-wrap {
+  width: 100%;
+  max-width: 720px;
+  padding: 32px 24px 60px;
+}
+
+.manage-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.manage-header h1 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.manage-controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+#search-box {
+  flex: 2;
+}
+
+.manage-controls select {
+  flex: 1;
+}
+
+.manage-list {
+  max-height: none;
+  overflow: visible;
+}
+
+.manage-list .link-item {
+  padding: 12px 0 12px 12px;
+}
+
+.manage-list .link-title {
+  font-size: 14px;
+  white-space: normal;
+}
+
+.manage-list .link-url {
+  font-size: 11px;
+  white-space: normal;
+  word-break: break-all;
+}

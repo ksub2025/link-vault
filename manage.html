@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Link Vault — All links</title>
+  <link rel="stylesheet" href="popup.css" />
+  <link rel="stylesheet" href="manage.css" />
+</head>
+<body class="manage-body">
+  <div class="manage-wrap">
+    <header class="manage-header">
+      <div>
+        <h1>Link Vault</h1>
+        <p class="subtitle" id="count-label">0 links, stored only on this machine.</p>
+      </div>
+      <button id="export-btn" class="export-btn">Export as JSON</button>
+    </header>
+
+    <div class="manage-controls">
+      <input type="search" id="search-box" placeholder="Search title, URL, or note…" />
+      <select id="filter-topic">
+        <option value="all">All topics</option>
+      </select>
+      <select id="filter-time">
+        <option value="all">All</option>
+        <option value="timely">Timely only</option>
+        <option value="timeless">Timeless only</option>
+      </select>
+      <select id="sort-by">
+        <option value="newest">Newest first</option>
+        <option value="oldest">Oldest first</option>
+        <option value="topic">By topic</option>
+      </select>
+    </div>
+
+    <ul id="link-list" class="link-list manage-list"></ul>
+    <p id="empty-state" class="empty-state" hidden>No links match this filter.</p>
+  </div>
+
+  <script src="shared.js"></script>
+  <script src="manage.js"></script>
+</body>
+</html>
