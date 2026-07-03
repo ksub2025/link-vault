@@ -1,55 +1,63 @@
 # Link Vault
 
-A small Chrome extension that captures links with a topic and a timeless/timely
-status. Everything lives in `chrome.storage.local`, on this machine only.
-Nothing is sent anywhere, there is no server, no account, no sync. That was
-a deliberate choice, not a limitation we ran out of time to fix.
+![License](https://img.shields.io/github/license/ksub2025/link-vault)
+![Manifest](https://img.shields.io/badge/manifest-v3-blue)
+![Dependencies](https://img.shields.io/badge/dependencies-none-brightgreen)
 
-## Install (load unpacked, since this isn't on the Chrome Web Store)
+A tiny Chrome extension that saves links with a topic and a Timely/Timeless
+status. No account, no server, no sync. Everything stays in your browser's
+local storage, permanently.
 
-1. Unzip this folder somewhere you'll remember, e.g. `~/link-vault`.
-2. Open Chrome and go to `chrome://extensions`.
-3. Turn on **Developer mode** (top right toggle).
-4. Click **Load unpacked**, and select the unzipped `link-vault` folder.
-5. Pin it from the puzzle-piece icon in the toolbar so it's one click away.
+<img width="356" height="427" alt="Screenshot 2026-07-03 at 2 09 46 PM" src="https://github.com/user-attachments/assets/151077d9-59e6-407c-9324-84fcc7a6d4ce" />
 
-## How to use it
 
-**Quick capture, while browsing:** right-click any page or any link and
-choose "Save to Link Vault." It saves instantly as Uncategorized / Timely,
-the same way your Inbox.md takes things in without judgment. Clean it up
-later.
+## Why
 
-**Deliberate capture, from the popup:** click the extension icon. It
-pre-fills the current tab's title and URL. Add a topic (e.g. "ACR 2026",
-"Growth Conversations"), mark it Timely or Timeless, optionally add a short
-note, and save.
+Most link-saving tools assume you want everything backed up to someone
+else's cloud. This one doesn't. If some of what you're saving is sensitive,
+or you just don't want another login and another set of permissions, this
+trades sync for that guarantee.
 
-**Sorting later:** every saved link shows its topic as an editable field and
-its Timely/Timeless status as a clickable pill, right in the list. No need
-to reopen a form to fix a quick-capture.
+## How it works
 
-**Once you've got more than a handful:** click "View all →" in the popup.
-It opens a full browser tab, not the cramped popup, with search across
-title/URL/note, the same two filters, and a sort order (newest, oldest, or
-by topic). This is the same data, just a bigger room to stand in. The
-popup itself only ever shows your latest 8 matching links, by design, so
-it never becomes the thing you're scrolling through at 100+ links.
+**Right-click to save.** Any page, any link, one click, saved instantly as
+Uncategorized / Timely. No form, no friction. Clean it up later.
 
-**Filtering:** the two dropdowns above the list filter by topic and by
-timeless/timely, independently, since they're two different questions
-about a link, not one.
+**Or use the popup for more control.** It pre-fills the current tab. Add a
+topic, mark it Timely or Timeless, optionally leave a note.
 
-**Export:** the Export button downloads everything as a JSON file. You
-chose single-machine-only for now, this button is what makes "add sync
-later" possible without rebuilding anything: on a second machine, load the
-same extension, and a future version can import that file. Not built yet,
-kept out on purpose to match what you asked for today.
+**Edit in place.** Every saved link has its topic and time-status editable
+right in the list, click the topic to retype it, click the pill to flip it.
 
-## What's deliberately not here
+**Search everything once it grows.** "View all" opens a full tab: search
+across title, URL, note, and topic, filter by topic or time-sensitivity,
+sort newest, oldest, or by topic. The popup itself only shows your 8 most
+recent matches, so it never becomes an endless scroll.
 
-No cloud storage, no Google account sync, no company data leaves this
-machine, because the extension never talks to a server at all. No login.
-No analytics. If you ever want cross-machine sync, that's a real decision
-about which channel you're willing to route through, worth a fresh
-conversation rather than a silent default.
+**Export anytime.** One click downloads everything as JSON, your data, in
+a format you can read without this extension installed.
+
+## Install
+
+Not on the Chrome Web Store, so load it manually:
+
+1. Clone or download this repo.
+2. Go to `chrome://extensions`, turn on **Developer mode**.
+3. Click **Load unpacked**, select the folder.
+4. Pin it from the toolbar.
+
+## Permissions, and why
+
+`storage`, `contextMenus`, `activeTab`. Nothing else. No host permissions,
+no network calls. Four small JS files, readable end to end in one sitting
+if you want to verify that yourself.
+
+## Contributing
+
+Small codebase, on purpose. Issues and pull requests welcome, especially
+around optional sync, that's the one feature left out deliberately rather
+than built and forced on everyone.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
