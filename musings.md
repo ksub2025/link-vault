@@ -1,4 +1,4 @@
-I'm building a discipline: build and blog, every day. Some days the build is big. Some days it's tiny. A build is a build either way.
+I'm building a discipline: build and blog, (almost) every day. Some days the build is big. Some days it's tiny. A build is a build either way.
 
 GitHub is the new resume of the AI era. I see links to repos everywhere and I feel genuinely excited about what that means.
 
