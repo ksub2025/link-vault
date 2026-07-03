@@ -48,7 +48,7 @@ kept out on purpose to match what you asked for today.
 
 ## What's deliberately not here
 
-No cloud storage, no Google account sync, no ServiceNow data leaves this
+No cloud storage, no Google account sync, no company data leaves this
 machine, because the extension never talks to a server at all. No login.
 No analytics. If you ever want cross-machine sync, that's a real decision
 about which channel you're willing to route through, worth a fresh
